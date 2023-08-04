@@ -22,9 +22,10 @@ def create_upload(request):
             if file_type not in IMAGE_FILE_TYPES:
                 return render(request, 'profile_maker/error.html')
             # user_pr.save()
-            print(audio_file_path)
+            
             audio_file_path = os.path.abspath(os.path.join('media', str(request.FILES['display_audio'])))
-
+            print(request.FILES['display_audio'])
+            print(audio_file_path)
 
             if not os.path.exists(audio_file_path):
                 return render(request, 'profile_maker/error.html')
