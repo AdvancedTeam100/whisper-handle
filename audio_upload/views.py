@@ -25,9 +25,9 @@ def create_upload(request):
                 return render(request, 'profile_maker/error.html')
             # user_pr.save()
             
-            audio_file_path = os.path.abspath(os.path.join(settings.MEDIA_ROOT, str(request.FILES['display_audio'])))
+            audio_file_path = os.path.join(settings.MEDIA_ROOT, str(request.FILES['display_audio']))
             print(request.FILES['display_audio'])
-            print(audio_file_path)
+            print(settings.MEDIA_ROOT)
 
             openai.api_key = "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"
 
