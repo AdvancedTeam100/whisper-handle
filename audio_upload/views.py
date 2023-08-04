@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import openai
+
+from whisperHandle import settings
 from .forms import Profile_Form
 from .models import Upload_audio
 import os
@@ -23,7 +25,7 @@ def create_upload(request):
                 return render(request, 'profile_maker/error.html')
             # user_pr.save()
             
-            audio_file_path = os.path.abspath(os.path.join('media', str(request.FILES['display_audio'])))
+            audio_file_path = os.path.abspath(os.path.join(settings.MEDIA_ROOT, str(request.FILES['display_audio'])))
             print(request.FILES['display_audio'])
             print(audio_file_path)
 
