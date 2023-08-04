@@ -27,9 +27,6 @@ def create_upload(request):
             print(request.FILES['display_audio'])
             print(audio_file_path)
 
-            if not os.path.exists(audio_file_path):
-                return render(request, 'profile_maker/error.html')
-
             openai.api_key = "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"
 
             with open(audio_file_path, "rb") as audio_file:
