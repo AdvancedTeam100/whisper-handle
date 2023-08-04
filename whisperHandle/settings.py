@@ -26,11 +26,12 @@ SECRET_KEY = 'django-insecure-g=c%(4x%#ckmk2x2u6-6lp16)6@i5ff@+l!5sav120i*$%whf^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 #DataFlair #File Uploading
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 
 # Application definition
