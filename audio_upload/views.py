@@ -23,13 +23,13 @@ def create_upload(request):
             file_type = file_type.lower()
             if file_type not in IMAGE_FILE_TYPES:
                 return render(request, 'profile_maker/error.html')
-            # user_pr.save()
+            user_pr.save()
             
             audio_file_path = os.path.join(settings.MEDIA_ROOT, str(request.FILES['display_audio']))
             print(request.FILES['display_audio'])
             print(settings.MEDIA_ROOT)
 
-            openai.api_key = "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"
+            openai.api_key = "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"
 
             with open(audio_file_path, "rb") as audio_file:
                 transcript = openai.Audio.transcribe(

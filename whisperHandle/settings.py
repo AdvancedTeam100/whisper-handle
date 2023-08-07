@@ -82,8 +82,13 @@ WSGI_APPLICATION = 'whisperHandle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:kaLdh9ctYJNDYgiGFIZE@containers-us-west-37.railway.app:6038/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'kaLdh9ctYJNDYgiGFIZE',
+        'HOST': 'containers-us-west-37.railway.app',
+        'PORT': 6038,
     }
 }
 
