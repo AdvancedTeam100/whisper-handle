@@ -29,7 +29,7 @@ def create_upload(request):
             print(request.FILES['display_audio'])
             print(settings.MEDIA_ROOT)
 
-            openai.api_key = "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"
+            openai.api_key = "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"
 
             with open(audio_file_path, "rb") as audio_file:
                 transcript = openai.Audio.transcribe(
